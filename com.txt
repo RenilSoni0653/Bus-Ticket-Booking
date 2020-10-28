@@ -1,0 +1,47 @@
+<?php
+$qu=mysqli_query($mysqli,"select * from compare where source='$source' and destination='$dest'");
+while($row12=mysqli_fetch_array($qu))
+{
+?>
+
+<ul id="multicol-menu" class="nav navbar-nav pull-right">
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Compare </a>
+   <ul class="dropdown-menu">
+        <div><!-- class="row">-->
+        <li>
+            <div class="row">
+				<div class="list-unstyled col-md-6 offset-md-5">
+				
+                <!--<ol>
+                    
+					<li><pre> No   Bus-type   Bus-name    Source     Destination     Available-Seats    Source-arrival-time   Destination-arrival-time    Total-Journey-time   Price   Status  Book</pre></li>
+                    <li>&nbsp;&nbsp;<?php echo $cnt;?>&nbsp;&nbsp;&nbsp;  <?php echo $row12['bname'];?>  <?php echo $row12['bno'];?>  <?php echo $row12['source'];?>  <?php echo $row['price'];?>  <?php echo $row['price'];?></li>
+                    <li><a href="#">test1-2</a></li>
+                    <li><a href="#">test1-3</a></li>
+                </ol>-->
+				</div>
+            </div>
+        </li>
+        </div>
+    </ul> 
+</li>
+</ul>
+</div>
+
+<style>
+.nav { margin-bottom: 0; }
+	.dropdown { position: static; }
+	.dropdown-menu { width: 100%; text-align: center; }
+	.dropdown-menu>li { display: inline-block; }
+	
+	.nav > li.dropdown.open {
+    position: static;
+	}
+	.nav > li.dropdown.open .dropdown-menu {
+		display:table; width: 100%; text-align: center; left:0; right:0;
+	}
+	.dropdown-menu>li {
+		display: table-cell;
+	}
+</style>
